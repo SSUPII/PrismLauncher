@@ -48,6 +48,21 @@ In conclusion, to check if all you need is installed (including optional):
 sudo pacman -S base-devel zlib cmake jdk17-openjdk extra-cmake-modules qt5-base qt5-tools mesa scdoc
 ```
 
+#### Fedora
+- C++ compiler: `gcc gcc-c++`
+- Qt5: `qt5-qtbase-devel qtchooser`
+- cmake: `cmake extra-cmake-modules`
+- zlib: `zlib-devel`
+- Java JDK 17: `java-17-openjdk java-17-openjdk-devel`
+- Mesa GL header: `mesa-libGL-devel`
+- (Optional) scdoc: `scdoc`
+
+In conclusion, to check if all you need is installed (including optional):
+
+```
+sudo dnf install gcc gcc-c++ qt5-qtbase-devel qtchooser cmake extra-cmake-modules zlib-devel java-17-openjdk java-17-openjdk-devel mesa-libGL-devel scdoc
+```
+
 ### Compiling
 #### Building and installing on the system
 This is usually the suggested way to build the client.
