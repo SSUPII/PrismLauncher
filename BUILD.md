@@ -14,9 +14,9 @@ cd PrismLauncher
 
 ## Linux
 
-This guide will mostly mention dependant packages by their Debian naming and commands are done by a user in the sudoers file.
+This guide will mostly presume commands are done by a user in the sudoers file.
 ### Dependencies
-
+#### Debian
 - A C++ compiler capable of building C++17 code (can be found in the package `build-essential`).
 - Qt Development tools 5.12 or newer (on Debian 11 or Debian-based distributions, `qtbase5-dev qtchooser qt5-qmake qtbase5-dev-tools libqt5core5a libqt5network5 libqt5gui5`).
 - `cmake` 3.15 or newer.
@@ -30,6 +30,22 @@ In conclusion, to check if all you need is installed (including optional):
 
 ```
 sudo apt install build-essential qtbase5-dev qtchooser qt5-qmake qtbase5-dev-tools libqt5core5a libqt5network5 libqt5gui5 cmake extra-cmake-modules zlib1g-dev openjdk-17-jdk libgl1-mesa-dev scdoc
+```
+
+#### Arch
+- C++ compiler: `base-devel` (Already installed in most Arch installations)
+- zlib: `zlib`
+- cmake: `cmake`
+- Java JDK 17: `jdk17-openjdk`
+- extra-cmake-modules: `extra-cmake-modules`
+- Qt5: `qt5-base qt5-tools`
+- Mesa GL headers: `mesa` (Already installed in most Arch installs)
+- (Optional) scdoc: `scdoc`
+
+In conclusion, to check if all you need is installed (including optional):
+
+```
+sudo pacman -S base-devel zlib cmake jdk17-openjdk extra-cmake-modules qt5-base qt5-tools mesa scdoc
 ```
 
 ### Compiling
